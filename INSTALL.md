@@ -54,19 +54,34 @@ Recommended setup: conda + python 3
 
 https://docs.conda.io/en/latest/miniconda.html
 
-## Cython
+## Cython version < 0.29.20
 
-Required to compile PySCIPOpt and PySVMRank
+Required to compile PySCIPOpt and PySVMRank with cython version earlier than 0.29.20
 ```
 conda install cython
 ```
 
-## PySCIPOpt
+## Cython version = 0.29.20
+
+Required to compile PySCIPOpt and PySVMRank with cython v0.29.20
+```
+pip install cython==0.29.20
+```
+
+## PySCIPOpt (to be compiled with cython version < 0.29.20)
 
 SCIP's python interface (modified version)
 
 ```
 pip install git+https://github.com/ds4dm/PySCIPOpt.git@ml-branching
+```
+
+## PySCIPOpt (to be compiled with cython version = 0.29.20)
+
+SCIP's python interface (modified version)
+
+```
+pip install git+https://github.com/ScrypticLabs/PySCIPOpt.git@ml-branching-cython-02920
 ```
 
 ## ExtraTrees
